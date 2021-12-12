@@ -21,3 +21,5 @@ Creación de archivos: figuras.html y figuras.js.
 3. Creación de las funciones encapsulando las fórmulas implementadas, utilizando valores dinámicos y recibiendolos como parámetros. 
 Se enviarán los valores por consola como argumento.
 4. Integrar Javascript con Html.
+    + Crear un formulario, con sus etiquetas e inputs identificados por id individuales. Declaración de los botones y las funciones que ejecutan.
+    + Crear funciones que capturan los datos ingresados por las acciones de los usuarios para responder con un mensaje por pantalla.
