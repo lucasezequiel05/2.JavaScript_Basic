@@ -83,7 +83,7 @@
 //     return console.log(`El área de la circunferencia es: ${areaCircunferencia}`);
 // }
 
-// VINCULANDO HTML CON JAVASCRIPT
+// INTEGRANDO HTML CON JAVASCRIPT
 
 function calcularPerimetroCuadrado(){    
     
@@ -111,7 +111,7 @@ function calcularPerimetroTriangulo(){
     input = document.getElementById("inputTrianguloBase");
     const baseTriangulo = input.value;
 
-    var perimetroTriangulo = (ladoTriangulo*2) + baseTriangulo;
+    var perimetroTriangulo = (Number(ladoTriangulo)*2) + Number(baseTriangulo);
     alert(`El perímetro del triángulo es: ${perimetroTriangulo}`);
 }
 
