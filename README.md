@@ -37,3 +37,26 @@ Creo los archivos isosceles.html e isosceles.js.
     + Al identificar el caso asigno el cateto más corto a la variable base y los iguales a la variable lado.
 
 5. Si la validación fue correcta realizo el cálculo de la altura mediante `Math.sqrt((lado**2)-((base/2)**2)` y muestro el resultado por pantalla.
+
+## Tercera parte: Crear Programa para una tienda ficticia que aplique porcentajes y descuentos:
+
+1. Análisis y definición de las fórmulas a aplicar:
+    + Recibira dos parámetros. En base al precio original y el descuento retornará el precio final con descuento aplicado:
+
+    `( PrecioOriginal * (100 - %Descuento) ) / 100`
+
+2. Implementar las fórmulas en Javascript con valores fijos.
+
+3. Crear funciones que permita trabajar con diferentes parámetros.
+
+4. Integrar Html con las funciones JS.
+    1. Creación de formulario con dos etiquetas para realizar input: una por precio Original y una para indicar el descuento.
+
+    2. Creación de un botón de tipo button para ejecutar el programa.
+
+    3. Declaración de una etiqueta `<p id="resultado">` para generar un texto que permita devolver los datos por pantalla.
+
+    4. En descuentos.js implemento una función que toma los inputs de precio y descuento, se almacenan en variables que serán pasadas como argumento al llamar a la función de `calcularPrecioConDescuento`.
+
+    5. Mediante la captura del elemento de la etiqueta declarada id = "resultado" se procede a agregar su contenido para ser mostrado en pantalla mediante el método resultado.innerText = "... "
+    

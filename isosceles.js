@@ -1,4 +1,5 @@
-// DESARROLLO PARA TRIÁNGULO ISÓSCELES
+// DESARROLLO PARA CALCULAR ALTURA DE UN TRIÁNGULO ISÓSCELES.
+// Se solicita al usuario que ingrese los valores y posteriormente se realiza una validación.
 
 function ejecutar(){
 
@@ -33,6 +34,7 @@ function ejecutar(){
         lado = parametro2;
     }
 
+    // Calcular la altura.
     if (esIsosceles) {
 
         const altura = Math.sqrt((lado**2)-((base/2)**2));
