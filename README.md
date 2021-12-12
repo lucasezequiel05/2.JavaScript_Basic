@@ -18,5 +18,6 @@ Creación de archivos: figuras.html y figuras.js.
     + Perímetro de circunferencia: diámetro * Pi
     + Área de circunferencia: (radio^2) * Pi
 2. Implementación de las fórmulas en JavaScript para realizar los cálculos, utilizando valores constantes.
-3. Creación de las funciones encapsulando las fórmulas implementadas.
+3. Creación de las funciones encapsulando las fórmulas implementadas, utilizando valores dinámicos y recibiendolos como parámetros. 
+Se enviarán los valores por consola como argumento.
 4. Integrar Javascript con Html.
