@@ -11,13 +11,13 @@ console.log({
     precioFinal
 })
 
-// Encapsulamiento de la fórmula y Desarrollo de función 
+// Encapsulamiento de la fórmula y Desarrollo de función.
 function calcularPrecioConDescuento (precioOriginal, descuento){
     const precioFinal = ( precioOriginal * (100-descuento) ) / 100;
     return precioFinal;
 }
 
-// Vinculando html con javascrip
+// Vinculando html con javascript.
 function onClickButtonCalcularPrecioFinal(){
     var input = document.getElementById("inputPrecio");
     const precioOriginal = Number(input.value);
@@ -27,7 +27,7 @@ function onClickButtonCalcularPrecioFinal(){
 
     const precioFinal = calcularPrecioConDescuento(precioOriginal, descuento);
 
-    //Ver resultado de la operación por pantalla
+    //Generar una mensaje con el resultado de la operación por pantalla.
     const resultado = document.getElementById("resultado");
     resultado.innerText = `El precio final con la aplicación del descuento del %${descuento} es = $${precioFinal}.`;
 }
