@@ -88,3 +88,37 @@ Creo los archivos isosceles.html e isosceles.js.
 4. Integración con HTML.
 
     + La integración con HTML se realiza a través del evento onclick sobre el botón con la leyenda procesar. Este ejecuta la función onClickButtonProcesarCupones.
+
+## QUINTA PARTE: Herramientas estadísticas: Promedio(media aritmética), moda y mediana.  
+
+Promedio:
+`(suma de valores)/cantidad de valores sumados`
+Solo en casos donde no hay valores que rompen con la regla.
+
+
+Mediana: Resuelve el problema de calcular un promedio teniendo unos pocos valores que rompen la regla con valores muy ajenos a la realidad.
+Depende del cálculo de números en una cantidad impar o par. Primero se ordenan de menor a mayor y después:
+    caso de impar: se toma el valor que esta en medio.
+    caso par: se toman los dos valores que están en la mitad y se dividen por 2.
+
+Moda: Representan a los elementos que más se repiten en un conjunto. Pueden contarse números o elementos.
+
+- Definir las fórmulas.
+- Implementar las fórmulas en JavaScript.
+- Crear funciones.
+
++ Calcular el promedio: Se procede de dos maneras:
+    + La primera es mediante un bucle for donde itera la lista y suma cada elemento a una variable como acumulador.
+    + La segunda es mediante el método reduce el cuál retorna un valor, en este caso la acumulación de la suma de los elementos en la lista. El método recibe una función como parámetro, esta a su vez recibe un valor inicializado en 0 como acumulador y un indicador del elemento a iterar en la lista para ser sumado al acumulador.
+
++ Calcular la mediana de una lista:
+    + En este caso se plantea el cálculo para dos listas: una con longitud par y el caso de una lista de longitud impar.
+
+    + arrayEsPar: Mediante la operación de comparar a través del resto obtenido de su división por 2 define a que categoría pertenece.
+
+    + arrayNoEstaVacio: Evita que ingrese una lista vacía.
+
+    + ordenarArray: Utiliza el método .sort() recibiendo una función de comparación para definir como realizar el orden de los elementos.
+
+Para el cálculo de la posición media se utiliza la operación de dividir la cantidad de elementos en la lista por dos y parsear el resultado a entero para obtener una posición de valor entero.
+En el caso de las listas con cantidad de elementos pares, se accede al elemento de la posición media y la posición anterior.
