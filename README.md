@@ -122,3 +122,23 @@ Moda: Representan a los elementos que más se repiten en un conjunto. Pueden con
 
 Para el cálculo de la posición media se utiliza la operación de dividir la cantidad de elementos en la lista por dos y parsear el resultado a entero para obtener una posición de valor entero.
 En el caso de las listas con cantidad de elementos pares, se accede al elemento de la posición media y la posición anterior.
+
+Calcular la moda de una serie de elementos:
+
++ Primero: declaro el arreglo de elementos a recorrer y un diccionario como lista de objetos clave:valor vacía para contadores.  
+El elemento será la llave de acceso a su contador, y este último se modifica sólo llamando al índice correspondiente.
+
++ Segundo: recorro el array con .map( function(elemento){})
+
++ Tercero: Hay dos casos: 1) Que el elemento no exista en el diccionario y se debe crear su contador. 
+2) Ya existe y hay que modificar el contador en +1.
+
+Condición: Cuando llamo por índice a un elemento del diccionario y este no existe retorna undefined, lo que como dato booleano equivale a false.
+
+Para realizar la operación:
++ Cuarto: Convierto el diccionario en un array mediante Object.entries(). A su vez ordeno el nuevo arreglo mediante
+sort() pasando una funciòn de comparación que compare los contadores de cada elemento almacenado.
+
++ Quinto: Una vez obtenido el valor de moda mediante la última posición del arreglo, paso a buscar el resto de elementos que compartan el mismo número de repeticiones.
+Declaro una variable de texto para concatenar los valores encontrados. Vuelvo a iterar con .map().
+Al final envío la variable de texto a la etiqueta correspondiente.

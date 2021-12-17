@@ -1,10 +1,20 @@
-const numeros = [1,10,20,30,40,50,60,70,1,20,30,55,100,20,70,90,15,300,9,25,10,10,55,36,363,55,55,22,12,15,7,50,100,80,90,70];
-let arrayModa = [[10,1],[55,1],[1,1]];
-
+const numeros = [10,20,5,30,5,10,50,100];
+//let arrayModa = [[10,1],[55,1],[1,1]];
+let arrayModa = [];
 // iterar el array
 
 // cada vez que un objeto aparezca lo guardo en la lista de moda si es que no existe.
     // la forma de guardarlo va a ser dentro de un array con dos elementos: detalle del elemento y cantidad de veces que se conto.
+
+/*
+Antes de empezar tengo una lista y una lista vacia donde almacenare los valores y su contador
+- Primero: Mientras recorro el array
+- Compruebo si ese elemento ya esta almacenado en el array de moda,
+- Si no es asì, declaro una tupla con el elemento, contador. La agrego al array moda con push.
+- Si ya existe busco su posición con findIndex y modifico el acumulador a +=1
+- Ordeno el array de contadores con una función de comparación que compare el segundo índice de los elementos.
+
+*/
 
 function elementoExiste(numero){
 
@@ -15,6 +25,7 @@ function elementoExiste(numero){
     return pos >= 0 ? true : false ;
 }
 
+// La función de búsqueda es desarrollada dependiendo de que se busca y como esta armada la estructura.
 function modificarContador(numero){
     function criterioDeBusqueda(elemento){
         return elemento[0] === numero;
@@ -24,46 +35,32 @@ function modificarContador(numero){
     arrayModa[pos][1] += 1;
 }
 
+// La función de comparación se desarrolla dependiendo de la estructura u objetos que se manejan.
 function ordenarModa(arrayModa) {
 
     function cmpElementos (elemA, elemB){
-        return elemA[1] - elemB[1];
+        return elemB[1] - elemA[1];
     }
 
     arrayModa.sort(cmpElementos);
-
 }
 
-
-
-function recorrer(){
+function recorrer(numeros){
     for(let i=0; i<numeros.length; i++){
 
         let contador = 0;
         
-        console.log(numeros[i]);
-        if (!elementoExiste(numeros[i])) {
-            
+        if (!elementoExiste(numeros[i])) {          
                 let tupla = [numeros[i],contador+1];
-                console.log(tupla);
                 arrayModa.push(tupla);
         } else{
             modificarContador(numeros[i]);          
         }
-        
     }
 }
-// for(let i=0; i<numeros.length; i++){
 
-//     let contador = 0;
+// -------PROGRAMA PRINCIPAL------
 
-//     if (!elementoExiste(numeros[i])) {
-//         let tupla = [numeros[i],contador+1];
-//         arrayModa.pop(tupla);
-//     } else {
-//         modificarContador(numeros[i]);
-//     }
-// }
-
-//ordenarModa(arrayModa);
-// console.log(arrayModa);
+recorrer(numeros);
+ordenarModa(arrayModa);
+console.log(arrayModa);
