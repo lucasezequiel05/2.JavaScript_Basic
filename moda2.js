@@ -18,31 +18,34 @@ sort() pasando una funciòn de comparación que compare los contadores de cada e
  Declaro una variable de texto para concatenar los valores encontrados. Vuelvo a iterar con .map().
  Al final envío la variable de texto a la etiqueta correspondiente.
 */
-
+/*
+//---------------
 const arreglo = [1,"kiwi",2,2,1,4,"apple",6,6,7,"kiwi",9,10,1,"kiwi"];
 
-// let dicc = {};
+let dicc = {};
 
-// arreglo.map((elemento)=>{
+arreglo.map((elemento)=>{
 
-//     if(dicc[elemento]) {
-//         dicc[elemento] +=1;
-//     } else{
-//         dicc[elemento] = 1;
-//     }
-// });
+    if(dicc[elemento]) {
+        dicc[elemento] +=1;
+    } else{
+        dicc[elemento] = 1;
+    }
+});
 
-// let nuevoArray = Object.entries(dicc).sort((elemA,elemB)=>{
-//     return elemA[1]-elemB[1];
-// });
+let nuevoArray = Object.entries(dicc).sort((elemA,elemB)=>{
+    return elemA[1]-elemB[1];
+});
 
-// const moda = nuevoArray[nuevoArray.length-1];
+const moda = nuevoArray[nuevoArray.length-1];
+//------------
+*/
 
 function calcularModa(lista){
     
     let dicc = {};
-    
-    arreglo.map((elemento)=>{
+
+    lista.map((elemento)=>{
 
         if(dicc[elemento]) {
             dicc[elemento] +=1;
@@ -57,19 +60,30 @@ function calcularModa(lista){
 
     const moda = nuevoArray[nuevoArray.length-1];
 
-    //En caso de existir múltiples valores con el máximo número de repeticiones:
-    //Itero el arreglo buscando el resto de elementos que coincide el número de repeticiones con el caso más alto.
-    // Para mostrar los datos por pantalla declaro una variable que almacenara texto. En cada validación, concateno el elemento a la cadena de texto.
-    // Al final capturo la etiqueta el contenido de la etiqueta y lo modifico con el contenido de texto almacenado.
+//En caso de existir múltiples valores con el máximo número de repeticiones:
+//Itero el arreglo buscando el resto de elementos que coincide el número de repeticiones con el caso más alto.
+// Para mostrar los datos por pantalla declaro una variable que almacenara texto. En cada validación, concateno el elemento a la cadena de texto.
+// Al final capturo la etiqueta el contenido de la etiqueta y lo modifico con el contenido de texto almacenado.
 
-    let texto ="Los elementos que se repiten "+moda[1]+" veces son:\n \n";
+    let mensaje ="Los elementos que se repiten "+moda[1]+" veces son:\n \n";
 
     nuevoArray.map((elemento)=>{
         if(elemento[1] === moda[1]){
-            texto = texto + `${elemento[0]} \n \n`;           
+            mensaje = mensaje + `${elemento[0]} \n \n`;           
         }
     });
 
     const mostrarResultado = document.getElementById("MostrarResultado");
-    mostrarResultado.innerText = texto;
+    mostrarResultado.innerText = mensaje;
+}
+
+// Se recibe una cadena de texto con el separador ",". Con split() se convierte a un array.
+// Este pasa como parámetro de la función calcularModa.
+function onClickEjecutar(){
+    var input = document.getElementById("inputLista");
+    const cadena = input.value;
+    const lista = cadena.split(",");
+    console.log(lista);
+
+    calcularModa(lista);
 }

@@ -125,6 +125,8 @@ En el caso de las listas con cantidad de elementos pares, se accede al elemento 
 
 Calcular la moda de una serie de elementos:
 
++ Solicitud de datos: mediante el input se solicita el ingreso de una cadena de texto con valores separados por ",", los cuales se convertiran mediante el uso de split() a un arreglo que se pasará como argumento de la función calcularModa().
+
 + Primero: declaro el arreglo de elementos a recorrer y un diccionario como lista de objetos clave:valor vacía para contadores.  
 El elemento será la llave de acceso a su contador, y este último se modifica sólo llamando al índice correspondiente.
 
