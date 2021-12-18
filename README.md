@@ -145,7 +145,8 @@ sort() pasando una funciòn de comparación que compare los contadores de cada e
 Declaro una variable de texto para concatenar los valores encontrados. Vuelvo a iterar con .map().
 Al final envío la variable de texto a la etiqueta correspondiente.
 
-## SÉPTIMA PARTE: Promedio Ponderado
+## SÉPTIMA PARTE: Promedio Ponderado (trabajando con un array de oobjetos)
+
 La suma de los elementos multiplicados cada uno por un peso o valor propio, dividido por la suma de los pesos.
 
 Mediante la declaración de un array de objetos se determina cada elemento con: nombre de asignatura, nota y crédito propio.
