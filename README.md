@@ -123,7 +123,7 @@ Moda: Representan a los elementos que más se repiten en un conjunto. Pueden con
 Para el cálculo de la posición media se utiliza la operación de dividir la cantidad de elementos en la lista por dos y parsear el resultado a entero para obtener una posición de valor entero.
 En el caso de las listas con cantidad de elementos pares, se accede al elemento de la posición media y la posición anterior.
 
-Calcular la moda de una serie de elementos:
+## SEXTA PARTE: Calcular la moda de una serie de elementos:
 
 + Solicitud de datos: mediante el input se solicita el ingreso de una cadena de texto con valores separados por ",", los cuales se convertiran mediante el uso de split() a un arreglo que se pasará como argumento de la función calcularModa().
 
@@ -144,3 +144,14 @@ sort() pasando una funciòn de comparación que compare los contadores de cada e
 + Quinto: Una vez obtenido el valor de moda mediante la última posición del arreglo, paso a buscar el resto de elementos que compartan el mismo número de repeticiones.
 Declaro una variable de texto para concatenar los valores encontrados. Vuelvo a iterar con .map().
 Al final envío la variable de texto a la etiqueta correspondiente.
+
+## SÉPTIMA PARTE: Promedio Ponderado
+La suma de los elementos multiplicados cada uno por un peso o valor propio, dividido por la suma de los pesos.
+
+Mediante la declaración de un array de objetos se determina cada elemento con: nombre de asignatura, nota y crédito propio.
+
+Combinando la secuencia de map(element) y reduce (sum=0,nextvalue):
++ Primero se declaran nuevos arreglos que almacenan el resultado de la multiplicación entre las notas y sus créditos y por otro lado, los créditos. 
++ Segundo se obtiene el valor acumulado de todos los elementos almacenados en ambos array. 
+Por último se realiza la división de la sumatoria de notas con créditos dividido la sumatoria de los créditos.
+
