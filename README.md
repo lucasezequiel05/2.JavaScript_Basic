@@ -1,4 +1,4 @@
-# proyecto2_JavaScript Básico
+# proyecto con JavaScript Básico
 
 ## Pasos del proyecto:
 
